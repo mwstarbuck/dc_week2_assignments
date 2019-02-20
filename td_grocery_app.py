@@ -61,6 +61,9 @@ def add_item(shopping_list):
 def create_list():
     name = input("Enter the store name: ")
     # Create object list
+    while name == "":
+        print("*** You did not enter a store name.***")
+        name = input("Enter the store name: ")
     shopping_list = ShoppingList(name)
     answer = ""
     while answer != "n":
